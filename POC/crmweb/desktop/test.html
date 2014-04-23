@@ -1,0 +1,27 @@
+<html ng-app>
+ 
+  <head>
+     <meta charset="utf-8" />
+	 <script src="angular.js"></script>
+	<script src="control.js"></script>
+  </head>
+ 
+  <body ng-controller="MainCtrl">
+    <div>{{message}}</div>
+ 
+		<ul>
+			<li><p ng-show="loading">Loading...</p></li>
+			<li> {{CS_SPKD_PCN__PACK_CODE}}</li>
+			<li> {{CS_PKPL_PCN__PACK_DESC}}</li>
+			<li> {{CS_PACK_TYPE__PACK_TYPE_DESC}}</li>
+			<li> {{CS_SPKD_PCN__PACK_STRT_DTTM}}</li>
+			<li> {{CS_SPKD_PCN__PACK_END_DTTM}}</li>
+			<li> {{CS_SPKD_PCN__DISC_CODE}}</li>
+			<li> {{TBL_OCCR}}</li>
+			<li> {{Status}}</li>
+		</ul>	
+	
+
+  </body>
+ 
+</html>

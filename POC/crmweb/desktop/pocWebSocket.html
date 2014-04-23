@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <link rel="shortcut icon" href="img/i_dtac_s.gif">
+	    <title>Desktop CRM</title>
+
+	    <!-- Bootstrap core CSS -->
+	    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Bootstrap theme -->
+	    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <!-- customize theme -->
+	    <link href="dtac.css" rel="stylesheet">
+
+		<link href="component.css" rel="stylesheet">
+		<link href="bootstrap-switch.css" rel="stylesheet">
+
+		<script src="js/angular.js"></script>
+		<script src="js/controlws.js"></script>
+
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+   		<![endif]-->
+	</head>
+
+  <body>
+
+	<form ng-controller="pocWebSocketController">
+
+								<div class="col-lg-4">
+
+											<table class="table" style="border-style:none;border:0px solid black;" width="60%">
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">User: </td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="Room" style="width:350px"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">Message:</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="Message" style="width:350px"> </td>
+												</tr>
+
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px"><button ng-click='Connect();' type="button" class="btn btn-success btn-xm">Connect</span></button></td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><button ng-click='Hungup();'  type="button" class="btn btn-danger btn-xm">Hungup</span></button></td>
+												</tr>
+
+											</table>
+
+								</div>
+
+								<div class="col-lg-12">
+									<img width="50px" ng-src="{{availableImages[currentImage].src}}"/>
+									<input type="text" class="form-control" placeholder="" ng-model="Msgs" style="width:350px">
+											<!--<ul>
+												<li class="info" ng-model="Msgs"></li>
+												<!--<li class="info" ng-repeat="msg in Msgs"> {{msg}} </li>
+											</ul>-->
+								</div>
+
+	<form>
+
+</body>

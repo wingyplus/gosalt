@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <link rel="shortcut icon" href="img/i_dtac_s.gif">
+	    <title>Desktop CRM</title>
+	
+	    <!-- Bootstrap core CSS -->
+	    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Bootstrap theme --> 
+	    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <!-- customize theme -->
+	    <link href="dtac.css" rel="stylesheet">
+		
+		<link href="component.css" rel="stylesheet">
+		<link href="bootstrap-switch.css" rel="stylesheet">
+		
+		<script src="js/angular.js"></script>
+		<script src="js/control.js"></script>
+		
+	    <!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	</head>
+  
+  <body>
+
+	<form ng-controller="SaveSpkdAddWSController">
+
+								<div class="col-lg-6">		
+
+											<table class="table" style="border-style:none;border:0px solid black;" width="60%">
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">USER_CODE</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="USER_CODE" style="width:350px" value="LLTHUNYADAP"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">BLPD_INDC</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="BLPD_INDC" style="width:350px" value="PCN"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">CS_SPKD_PCN__CUST_NUMB</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="CS_SPKD_PCN__CUST_NUMB" style="width:350px" value="536672462"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">CS_SPKD_PCN__SUBR_NUMB</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder=""ng-model="CS_SPKD_PCN__SUBR_NUMB" style="width:350px" value="66900010040"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">CS_SPKD_PCN__PACK_CODE</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="CS_SPKD_PCN__PACK_CODE" style="width:350px" value="31001501"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">CS_SUBR_PCN__SUBR_TYPE</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="CS_SUBR_PCN__SUBR_TYPE" style="width:350px"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">RD_TELP__TELP_TYPE</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="RD_TELP__TELP_TYPE" style="width:350px" value="TEL"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px">SAVE_FLAG</td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><input type="text" class="form-control" placeholder="" ng-model="SAVE_FLAG" style="width:350px" value="1"> </td>
+												</tr>
+												<tr>
+													<td align="right" style="border-style:none;border:0px solid black;" width="150px"><button type="button" class="btn btn-danger btn-xm">Clear</span></button></td>
+													<td style="border-style:none;border:0px solid black;" width="350px"><button ng-click='Save();'  type="button" class="btn btn-success btn-xm">Save</span></button></td>
+												</tr>
+
+											</table>
+
+									
+
+								</div>
+								
+								<div class="col-lg-6">		
+											<ul>
+												<li class="err" ng-repeat="error in errors"> {{ error}} </li>
+											</ul>
+											<ul>
+												<li class="info" ng-repeat="msg in msgs"> {{ msg}} </li>
+											</ul>
+											<ul>
+												<li> {{CS_SPKD_PCN__PACK_CODE}}</li>
+												<li> {{CS_PKPL_PCN__PACK_DESC}}</li>
+												<li> {{CS_PACK_TYPE__PACK_TYPE_DESC}}</li>
+												<li> {{CS_SPKD_PCN__PACK_STRT_DTTM}}</li>
+												<li> {{CS_SPKD_PCN__PACK_END_DTTM}}</li>
+												<li> {{CS_SPKD_PCN__DISC_CODE}}</li>
+												<li> {{TBL_OCCR}}</li>
+												<li> {{Status}}</li>
+											</ul>
+			
+											
+
+								</div>		
+	
+	<form>
+
+</body>
